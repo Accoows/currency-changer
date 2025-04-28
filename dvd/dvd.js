@@ -20,6 +20,8 @@ let velocityY = 1;
 const dvdWidth = 280; // Largeur du DVD
 const dvdHeight = 140; // Hauteur du DVD
 
+// Pour pouvoir prendre en compte le redimensionnement de la fenêtre il faut recharger la page
+
 // Fonction de déplacement du DVD
 function moov() {
     posX += velocityX;
@@ -45,6 +47,7 @@ function moov() {
     requestAnimationFrame(moov);
 }
 
+// Change la couleur du DVD à chaque rebond
 function changeColor() {
     const colors = ['blue', 'green', 'yellow', 'red'];
     const randomColor = Math.floor(Math.random() * colors.length);
